@@ -33,7 +33,7 @@ def python_example(samples=10000):
     hist3.SetTitle("Gauss+offset2;x;frequency")
     base2 = r.TF1("base2","1/x/x",1,10)
     for i in range(samples*30):
-        x = base2.GetRandom()*10+40;
+        x = base2.GetRandom()*10+40
         hist3.Fill(x)
     tc2.cd(3).SetLogy()
     hist3.Draw("e")
